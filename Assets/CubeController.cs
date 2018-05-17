@@ -43,10 +43,10 @@ public class CubeController : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D other)
     {
         //地面とオブジェクトに接触したときに音を再生する
-        if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Object" )
+        if (other.gameObject.tag == "GroundTag" || other.gameObject.tag == "ObjectTag" )
         {
             //効果音を再生
-            GetComponent<AudioSource>();
+            GetComponent<AudioSource>().Play();
         }
     }
 
